@@ -106,4 +106,12 @@
      * @method fopen funciona para abrir un archivo.
      * 
      */
+    /**
+     * !Declare strict types sirve para que php sea mas estricto 
+     * *con los tipos de datos en las funciones, programacion orientada a objetos
+     * *arrays, etc.
+     * *Si se coloca en 1, php sera mas estricto
+     * *Si se coloca en 0, php sera menos estricto
+     * ?? declare( strict_types = 1 ); 
+     */
 ?>
