@@ -32,5 +32,7 @@
      * *INDEX.PHP (Página principal)
      * ?(Página principal del proyecto)
      * 
+     * !? UN ARCHIVO PHP CONTIENE LA SIGUIENTE SINTAXIS
+     * ?             <?php ..(código).. ?>
      */
 ?>
