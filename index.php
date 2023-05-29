@@ -34,5 +34,15 @@
      * 
      * !? UN ARCHIVO PHP CONTIENE LA SIGUIENTE SINTAXIS
      * ?             <?php ..(código).. ?>
+     * 
+     * !? DATOS
+     * *Variables 
+     * se definen como un signo $ antes del nombre de la variable.
+     * ?$nombre = "Juan";
+     * 
+     * *Constantes
+     * se definen con la función define().
+     * ?define("PI", 3.1416);
+     * 
      */
 ?>
