@@ -68,7 +68,7 @@
      * se definen con la función define().
      * ?define("PI", 3.1416);
      * 
-     * !! 3.1. (7) TIPOS DE DATOS
+     * !! 4. (8) TIPOS DE DATOS
      * 
      * !!! |°J°| SIEMPRE COLOCAR EL TIPO DE DATO DE LA VARIABLE.
      * *Enteros
@@ -113,5 +113,147 @@
      * *Si se coloca en 1, php sera mas estricto
      * *Si se coloca en 0, php sera menos estricto
      * ?? declare( strict_types = 1 ); 
+     * 
+     * 
+     * ! 5. (9) OPERADORES
+     * 
+     * ! 5.1 (9) OPERADORES ARITMÉTICOS
+     * *Suma
+     * ?$suma = 2 + 2;
+     * 
+     * *Resta
+     * ?$resta = 2 - 2;
+     * 
+     * *Multiplicación
+     * ?$multiplicacion = 2 * 2;
+     * 
+     * *División
+     * ?$division = 2 / 2;
+     * 
+     * *Módulo
+     * ?$modulo = 2 % 2;
+     * 
+     * *Exponencial
+     * ?$exponencial = 2 ** 2;
+     * 
+     * !! 5.2. (9) OPERADORES DE ASIGNACIÓN
+     * *Asignación
+     * ?$numero = 2;
+     * 
+     * !! 5.3. (9) OPERADORES DE ARRAY
+     * *Unión
+     * ?$union = [1, 2] + [3, 4];
+     * 
+     * *Igualdad
+     * ?$igualdad = [1, 2] == [3, 4];
+     * 
+     * *Identidad
+     * ?$identidad = [1, 2] === [3, 4];
+     * 
+     * *Desigualdad
+     * ?$desigualdad = [1, 2] != [3, 4];
+     * 
+     * *Desigualdad
+     * ?$desigualdad = [1, 2] <> [3, 4];
+     * 
+     * *No identidad
+     * ?$noIdentidad = [1, 2] !== [3, 4];
+     * 
+     * !! 5.4 (9) BITWISE OPERATORS
+     * *And
+     * ?$and = [1, 2] & [3, 4];
+     * 
+     * *Xor
+     * ?$xor = [1, 2] ^ [3, 4];
+     * 
+     * *Or
+     * ?$or = [1, 2] | [3, 4];
+     * 
+     * *Shift left
+     * ?$shiftLeft = [1, 2] << [3, 4];
+     * 
+     * *Shift right
+     * ?$shiftRight = [1, 2] >> [3, 4];
+     * 
+     * *Not
+     * ?$not = ~[1, 2];
+     * 
+     * !! 5.5. (9) OPERADORES DE COMPARACIÓN
+     * *Igual que
+     * ?$igualQue = [1, 2] == [3, 4];
+     * 
+     * *Idéntico que
+     * ?$identicoQue = [1, 2] === [3, 4];
+     * 
+     * *Diferente que
+     * ?$diferenteQue = [1, 2] != [3, 4];
+     * 
+     * *No identico que
+     * ?$noIdenticoQue = [1, 2] !== [3, 4];
+     * 
+     * *No igual que
+     * ?$noIgualQue = [1, 2] <> [3, 4];
+     * 
+     * *Mayor que
+     * ?$mayorQue = [1, 2] > [3, 4];
+     * 
+     * *Menor que
+     * ?$menorQue = [1, 2] < [3, 4];
+     * 
+     * *Mayor o igual que
+     * ?$mayorOIgualQue = [1, 2] >= [3, 4];
+     * 
+     * *Menor o igual que
+     * ?$menorOIgualQue = [1, 2] <= [3, 4];
+     * 
+     * *Spaceship
+     * se utiliza para comparar dos expresiones y devolver un valor negativo
+     * cero o positivo según la relación entre ellas.
+     * ?$spaceship = [1, 2] <=> [3, 4];
+     * 
+     * !! 5.6. (9) EXECUTION OPERATORS
+     * *Ejecución
+     * ?$ejecucion = `ls -la`; 
+     * 
+     * !! 5.7. (9) OPERADORES DE CONTROL DE ERRORES
+     * @ = at sign
+     * *Control de errores
+     * control de errores, se utiliza para suprimir los mensajes de error
+     * ?$controlErrores = @file_get_contents("archivo.txt");
+     * 
+     * !! 5.8. (9) OPERADORES DE INCREMENTO/DECREMENTO
+     * *Pre-incremento
+     * ?$preIncremento = ++$numero;
+     * 
+     * *Post-incremento
+     * ?$postIncremento = $numero++;
+     * 
+     * *Pre-decremento
+     * ?$preDecremento = --$numero;
+     * 
+     * *Post-decremento
+     * ?$postDecremento = $numero--;
+     * 
+     * ! 5.9. (9) OPERADORES LÓGICOS
+     * *And
+     * ?$and = true && false;/*
+     * 
+     * *Or
+     * ?$or = true || false;
+     * 
+     * *Xor
+     * ?$xor = true xor false;
+     * 
+     * *And lógico
+     * ?$andLogico = true and false;
+     * 
+     * *Or lógico
+     * ?$orLogico = true or false;
+     * 
+     * *XOr lógico
+     * ?$xorLogico = true xor false;
+     * 
+     * *Not
+     * ?$not = !true;
+     * 
      */
-?>
