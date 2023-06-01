@@ -105,8 +105,8 @@
      * ?$archivo = fopen("archivo.txt", "r");
      * @method fopen funciona para abrir un archivo.
      * 
-     */
-    /**
+     *
+     *
      * !Declare strict types sirve para que php sea mas estricto 
      * *con los tipos de datos en las funciones, programacion orientada a objetos
      * *arrays, etc.
@@ -209,6 +209,9 @@
      * *Spaceship
      * se utiliza para comparar dos expresiones y devolver un valor negativo
      * cero o positivo según la relación entre ellas.
+     * / -1 Si Izquierda es menor que Derecha
+     * / 0 Si Izquierda es igual a Derecha
+     * / 1 Si Izquierda es mayor que Derecha
      * ?$spaceship = [1, 2] <=> [3, 4];
      * 
      * !! 5.6. (9) EXECUTION OPERATORS
@@ -256,4 +259,47 @@
      * *Not
      * ?$not = !true;
      * 
+     * 
+     * ! 6. (10) Arreglos, Arreglos asociativos y funciones para arreglos
+     * 
+     * * Convertir el texto del array en un json
+     * ? header('Content-Type: application/json');
+     * 
+     * * Array indexado
+     *  un arreglo indexado (los índices son números)
+     * @var array $nombres
+     * ?$nombres = array('Juan', 'Pedro', 'Luis', 'Carlos');
+     * ?print_r($nombres);
+     * 
+     * * Array asociativo
+     * un arreglo asociativo (los índices son nombres)
+     * @var array $edades
+     * ? $edades = array(
+     * ?'Juan' => 20,
+     * ?'Pedro' => 21,
+     * ?'Luis' => 22,
+     * ?'Carlos' => 23);
+     * ?'Roberto' => 24);
+     * ??print_r($edades);
+     * 
+     * * Array multidimensional
+     * un arreglo multidimensional (un arreglo dentro de otro arreglo)
+     * @var array $personas
+     * 
+     * ?$personas = array(
+     * ?"Juan" => array('Ciudad' => 'Barcelona', 'Pais' => 'España', 'edad' => 35),
+     * ?"Pedro" =>array('Ciudad' => 'París', 'Pais' => 'Francia', 'edad' => 37),
+     * ?"Luis" =>array('Ciudad' => 'Londres', 'Pais' => 'Reino Unido', 'edad' => 32),
+     * ?"Carlos" =>array('Ciudad' => 'Berlín', 'Pais' => 'Alemania', 'edad' => 41),
+     * ?"Roberto" =>array('Ciudad' => 'Roma', 'Pais' => 'Italia', 'edad' => 39)
+     * ?);
+     * 
+     * *Ejemplo de como insertar un dato nuevo al array Multidimensional
+     * ?$personas["Pedro"]["Altura"] = 1.60;
+     * ?print_r($personas);
+     *
+     * *Ejemplo para acceder a un dato del array Multidimensional
+     *  ?echo $personas["Pedro"]["Pais"];
+     * 
      */
+?>
