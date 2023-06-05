@@ -662,5 +662,38 @@
      * - La palabra Naranja tiene 7 letras
      * - La palabra Fresa tiene 5 letras
      * 
+     * 
+     * ! 7. (11) ISSET() - EMPTY() - UNSET()
+     * *isset()
+     * | Determina si una variable está definida y no es NULL
+     * ° Devuelve TRUE si var existe y tiene un valor distinto de NULL, FALSE de lo contrario.
+     * ++ isset(mixed $var, mixed ...$vars): bool
+     * /$var = '';
+     * /var_dump(isset($var));
+     * /var_dump(isset($var, $var2));
+     * - bool(true)
+     * - bool(false)
+     * 
+     * *empty()
+     * | Determina si una variable está vacía
+     * ° Devuelve FALSE si var existe y tiene un valor no vacío, distinto de cero. De otro modo devuelve TRUE.
+     * ++ empty(mixed $var): bool
+     * /$var = 0;
+     * /var_dump(empty($var));
+     * /var_dump(empty($var2));
+     * - bool(true)
+     * - bool(true)
+     * 
+     * *unset()
+     * | Destruye una variable especificada
+     * ° Devuelve TRUE en caso de éxito o FALSE en caso de error.
+     * ++ unset(mixed $var, mixed ...$vars): void
+     * /$foo = "bar";
+     * /unset($foo);
+     * /var_dump($foo);
+     * - NULL
+     * 
+     * 
+     * 
      */
 ?>
