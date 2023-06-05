@@ -694,6 +694,140 @@
      * - NULL
      * 
      * 
+     * ! 8. (12) ESTRUCTURAS CONDICIONALES
+     * *if()
+     * | Condiciona la ejecución de uno o varios fragmentos de código al valor de una expresión
+     * ° Si la expresión es evaluada como TRUE, PHP ejecutará la sentencia y si es evaluada como FALSE la ignorará.
+     * ++ if (expr): sentencia
+     * /$a = 5;
+     * /$b = 10;
+     * /if ($a > $b) {
+     * /    echo "a es mayor que b";
+     * /} elseif ($a == $b) {
+     * /    echo "a es igual que b";
+     * /} else {
+     * /    echo "a es menor que b";
+     * /}
+     * - a es menor que b
      * 
+     * *else()
+     * | Sentencia alternativa para if, que ejecutará la sentencia alternativa si la expresión del if original da como resultado FALSE
+     * ° Si la expresión del if original da como resultado TRUE, no se ejecutará la sentencia alternativa.
+     * ++ else: sentencia
+     * /$a = 5;
+     * /$b = 10;
+     * /if ($a > $b) {
+     * /    echo "a es mayor que b";
+     * /} elseif ($a == $b) {
+     * /    echo "a es igual que b";
+     * /} else {
+     * /    echo "a es menor que b";
+     * /}
+     * - a es menor que b
+     * 
+     * *elseif()
+     * | Como puede haber más de una sentencia elseif, se pueden encadenar para crear una estructura if...elseif...else
+     * ° Si se utiliza elseif como sentencia alternativa de if, significa que se desea ejecutar una sentencia diferente en caso de que la expresión del if original dé como resultado FALSE.
+     * ++ elseif (expr): sentencia
+     * /$a = 5;
+     * /$b = 10;
+     * /if ($a > $b) {
+     * /    echo "a es mayor que b";
+     * /} elseif ($a == $b) {
+     * /    echo "a es igual que b";
+     * /} else {
+     * /    echo "a es menor que b";
+     * /}
+     * - a es menor que b
+     * 
+     * !! 8.1 (12) ESTRUCTURAS DE CONTROL CONDICIONALES
+     * *switch()
+     * | Es similar a una serie de sentencias IF en la misma expresión
+     * ° En muchas ocasiones es más fácil de leer y de escribir. PHP soporta estructuras de control switch de una o múltiples ramas.
+     * ++ switch (expr):
+     * ++ case expr:
+     * ++    sentencias
+     * ++    break;
+     * ++ default:
+     * ++    sentencias
+     * ++    break;
+     * 
+     * 
+     * 
+     * !!! 8.2. (12) ESTRUCTURAS DE CONTROL ITERATIVAS
+     * *while()
+     * | Mientras la expresión del while sea evaluada como TRUE, se ejecutará la sentencia while.
+     * ° Mientras la expresión del while sea evaluada como TRUE, se ejecutará la sentencia while.
+     * ++ while (expr):
+     * ++    sentencia
+     * /$i = 1;
+     * /while ($i <= 5) {
+     * /    echo $i++;  '''el valor presentado sería $i antes del incremento'''
+     * /}
+     * - 1
+     * - 2
+     * - 3
+     * - 4
+     * - 5
+     * 
+     * 
+     * 
+     * *do-while()
+     * | La sentencia do-while es similar a la sentencia while, con la diferencia que la expresión evaluada aparece al final de cada iteración en lugar de al principio.
+     * ° La sentencia do-while se ejecutará al menos una vez, independientemente de que la expresión while sea evaluada como TRUE o FALSE.
+     * ++ do:
+     * ++    sentencia
+     * ++ while (expr);
+     * /$i = 0;
+     * /do {
+     * /    echo $i;
+     * /} while ($i > 0);
+     * - 0
+     *  
+     * *for()
+     * | La sentencia for es una de las más completas de PHP, y permite expresar bucles de manera compacta.
+     * ° La sentencia for es una de las más completas de PHP, y permite expresar bucles de manera compacta.
+     * ++ for (expr1; expr2; expr3):
+     * ++    sentencia
+     * /for ($i = 1; $i <= 10; $i++) {
+     * /    echo $i;
+     * /}
+     * - 12345678910
+     * 
+     * *foreach()
+     * | La sentencia foreach proporciona un modo sencillo de iterar sobre arrays.
+     * ° foreach funciona sólo sobre arrays y objetos, y emitirá un error al intentar usarlo con una variable de un tipo diferente de datos o una variable no inicializada.
+     * ++ foreach (array_expression as $value):
+     * ++    sentencia
+     * /$array = array(1, 2, 3, 4);
+     * /foreach ($array as $valor) {
+     * /    echo $valor;
+     * /}
+     * - 1234
+     * 
+     * *break()
+     * | Finaliza la ejecución de la estructura for, foreach, while, do-while o switch actual
+     * ° break acepta un argumento numérico opcional que indica cuántos niveles de estructura anidada se deben romper. El valor por defecto es 1, sólo se rompe la estructura inmediata.
+     * ++ break(int $nivel = 1): void
+     * /for ($i = 0; $i < 10; $i++) {
+     * /    if ($i == 5) {
+     * /        break;  '''Sale del bucle for '''
+     * /    }
+     * /    echo $i;
+     * /}
+     * - 01234
+     * 
+     * *continue()
+     * | continue es usado dentro de estructuras de control de bucles para saltar la parte del bucle restante de la iteración actual y continuar la ejecución en la evaluación de la condición de dicho bucle.
+     * ° continue acepta un argumento numérico opcional que indica cuántos niveles de estructura anidada se deben de saltar. El valor por defecto es 1, saltando a la estructura externa más cercana.
+     * ++ continue(int $nivel = 1): void
+     * /for ($i = 0; $i < 10; $i++) {
+     * /    if ($i == 5) {
+     * /        continue;  '''Salta a la siguiente iteración'''
+     * /    }
+     * /    echo $i;
+     * /}
+     * - 012346789
+     *  
      */
 ?>
