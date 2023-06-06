@@ -954,5 +954,31 @@
      * /require "saludo.php";
      * 
      * 
+     * ! file_get_contents()
+     * | La función file_get_contents() es una función en PHP que nos permite leer el contenido de un archivo y devolverlo como una cadena de texto
+     * ° Devuelve FALSE en caso de error. No usar con archivos muy grandes
+     * ''' Es importante tener en cuenta que esta función carga todo el contenido en la memoria
+     * ?Es común utilizar file_get_contents() para leer archivos de texto, 
+     * ?archivos CSV o incluso contenido remoto a través de una URL,
+     * ?¡siempre y cuando se tenga habilitada la configuración allow_url_fopen en PHP.
+     * ++ file_get_contents(string $filename, bool $use_include_path = false, resource $context = null, int $offset = 0, int $maxlen = null): string|false
+     * / $filename: Especifica el nombre del archivo que se va a leer.
+     * / $use_include_path: Si se establece a TRUE, busca el archivo en la ruta include_path.
+     * / $context: Especifica el contexto de flujo. El contexto es una serie de opciones que pueden modificar el comportamiento de un flujo.
+     * / $offset: El desplazamiento donde comenzar a leer los datos.
+     * / $maxlen: El número máximo de bytes a leer. Los valores negativos o nulos significan leer hasta el final del archivo.
+     * 
+     * -$content = file_get_contents('archivo.txt');
+     *-if ($content !== false) {
+     *-    // El archivo se leyó correctamente
+     *-    echo $content;
+     *-} else {
+     *-    // Ocurrió un error al leer el archivo
+     *-    echo 'No se pudo leer el archivo.';
+     *-}
+     *
+     * *En este ejemplo, se lee el contenido del archivo "archivo.txt"
+     * *y se almacena en la variable $content. Luego, se verifica si la lectura fue exitosa
+     * *y se imprime el contenido si todo salió bien.
      */
 ?>
