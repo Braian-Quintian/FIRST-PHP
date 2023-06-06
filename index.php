@@ -114,6 +114,11 @@
      * *Si se coloca en 0, php sera menos estricto
      * ?? declare( strict_types = 1 ); 
      * 
+     * ! NULL vs Undefined vs Void vs Empty
+     * *Empty: Es un valor que existe pero no tiene valor.
+     * *NULL: Es un valor que existe pero no tiene valor.
+     * *Undefined: Es un valor que no existe. 
+     * 
      * 
      * ! 5. (9) OPERADORES
      * 
@@ -829,5 +834,125 @@
      * /}
      * - 012346789
      *  
+     * 
+     * ! 9. (13) FUNCIONES
+     * 
+     * !! Es de buena práctica utilizar la palabra reservada void a aquellas funciones que
+     * !!no retorna ningún tipo de valor esto me facilita la labor de identificar cuál
+     * !!función me retorna y cuál función no me me retorna ningún valor.
+     * 
+     * 
+     * / '''USE''' es una palabra reservada que nos permite acceder a variables que se encuentran fuera del scope de la función.
+     * ?? se pasa el ''': string''' para indicar que el tipo de dato que se va a retornar es un string
+     * ? si se le pasa ''': ?string''' se indica que el tipo de dato que se va a retornar es un string o null
+     * $fn = function () use ($nombre): string 
+     * {
+     *    return "Hola $nombre";
+     * };
+     * *Funciones
+     * | Una función es un bloque de código que se puede ejecutar en cualquier momento, y que puede o no devolver un valor.
+     * ° Las funciones serán ejecutadas por una llamada a la función.
+     * ++ function nombre_funcion() {
+     * ++    sentencias
+     * ++ }
+     * /function saludo() {
+     * /    echo "Hola";
+     * /}
+     * /saludo();
+     * - Hola
+     * 
+     * *Parámetros
+     * | Los parámetros son variables que se pasan a la función.
+     * ° Los parámetros son variables que se pasan a la función. Los parámetros son especificados después del nombre de la función, entre paréntesis. Puede añadir tantos parámetros como desee, sólo separados por comas.
+     * ++ function nombre_funcion($parametro1, $parametro2, $parametro3) {
+     * ++    sentencias
+     * ++ }
+     * /function saludo($nombre) {
+     * /    echo "Hola $nombre";
+     * /}
+     * /saludo("Juan");
+     * - Hola Juan
+     * 
+     * *Parámetros por defecto
+     * | Puede especificar valores por defecto para los argumentos de una función.
+     * ° Puede especificar valores por defecto para los argumentos de una función. Si el argumento de la función es omitido al llamar a la función, el argumento por defecto será usado.
+     * ++ function nombre_funcion($parametro1 = valor1) {
+     * ++    sentencias
+     * ++ }
+     * /function saludo($nombre = "Juan") {
+     * /    echo "Hola $nombre";
+     * /}
+     * /saludo();
+     * - Hola Juan
+     * 
+     * *Retorno de valores
+     * | Para que una función devuelva un valor, use la sentencia return seguida del valor que desea devolver.
+     * ° Para que una función devuelva un valor, use la sentencia return seguida del valor que desea devolver.
+     * ++ function nombre_funcion() {
+     * ++    sentencias
+     * ++    return valor
+     * ++ }
+     * /function suma($a, $b) {
+     * /    $total = $a + $b;
+     * /    return $total;
+     * /}
+     * /echo suma(2, 3);
+     * - 5
+     *  
+     * ! 9.1 (13) FUNCIONES QUE NO RETORNAN VALORES
+     * *Funciones que no retornan valores
+     * | Si una función no retorna un valor, se puede omitir la sentencia return, o puede usarla sin especificar ningún valor.
+     * ° Si una función no retorna un valor, se puede omitir la sentencia return, o puede usarla sin especificar ningún valor.
+     * ++ function nombre_funcion() {
+     * ++    sentencias
+     * ++    return
+     * ++ }
+     * /function saludo($nombre) {
+     * /    echo "Hola $nombre";
+     * /}
+     * /saludo("Juan");
+     * - Hola Juan
+     * 
+     * *Funciones variables
+     * | PHP soporta la noción de funciones variables. Esto significa que si un nombre de función tiene paréntesis inmediatamente después, PHP buscará una función con un nombre coincidente y lo intentará ejecutar en lugar de una llamada a una función normal.
+     * ++ function nombre_funcion() {
+     * ++    sentencias
+     * ++    return
+     * ++ }
+     * /function saludo($nombre) {
+     * /    echo "Hola $nombre";
+     * /}
+     * /$funcion = "saludo";
+     * /$funcion("Juan");
+     * - Hola Juan
+     * 
+     * *Funciones anónimas
+     * | Una función anónima es una función sin nombre. Este tipo de función puede ser asignada a una variable y se puede tratar como cualquier otra variable, pasarse como argumento a otras funciones, etc.
+     * ++ function() {
+     * ++    sentencias
+     * ++ }
+     * /$saludo = function($nombre) {
+     * /    echo "Hola $nombre";
+     * /};
+     * /$saludo("Juan");
+     * - Hola Juan
+     * 
+     * ! 9.2 (13) include, include_once, require, require_once
+     * *include
+     * | La sentencia include incluye y evalúa el archivo especificado.
+     * ++ include "archivo.php";
+     * /include "saludo.php";
+     * 
+     * *include_once
+     * | La sentencia include_once incluye y evalúa el archivo especificado durante la ejecución del script. Esto es un caso especial de include.
+     * ++ include_once "archivo.php";
+     * /include_once "saludo.php";
+     * 
+     * *require
+     * | La sentencia require es idéntica a include excepto que en caso de fallo producirá un error fatal de nivel E_COMPILE_ERROR. En otras palabras, éste detiene el script mientras que include sólo emitirá una advertencia (E_WARNING) lo cual permite continuar el script.
+     * ++ require "archivo.php";
+     * /require "saludo.php";
+     * 
+     * 
      */
 ?>
