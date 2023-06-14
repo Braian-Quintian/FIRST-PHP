@@ -667,6 +667,25 @@
      * - La palabra Naranja tiene 7 letras
      * - La palabra Fresa tiene 5 letras
      * 
+     * *array_merge()
+     * | Combina dos o más arrays
+     * ° Devuelve el array resultante.
+     * ++ array_merge(array ...$arrays): array
+     * /$array1 = array("color" => "rojo", 2, 4);
+     * /$array2 = array("a", "b", "color" => "verde", "forma" => "trapezoide", 4);
+     * /$result = array_merge($array1, $array2);
+     * /print_r($result);
+     * - Array
+     * -(
+     * -    [color] => verde
+     * -    [0] => 2
+     * -    [1] => 4
+     * -    [2] => a
+     * -    [3] => b
+     * -    [forma] => trapezoide
+     * -    [4] => 4
+     * -)
+     * 
      * 
      * ! 7. (11) ISSET() - EMPTY() - UNSET()
      * *isset()
