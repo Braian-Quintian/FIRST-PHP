@@ -1127,5 +1127,14 @@
      * ++ $nombreClase
      * ++ });
      * 
+     *  ! 10.8 (14) Namespaces
+     * *Los espacios de nombres se utilizan para agrupar clases relacionadas, interfaces, funciones y constantes.
+     * *Los espacios de nombres se pueden definir utilizando la palabra clave namespace
+     * *Los espacios de nombres se pueden anidar indefinidamente
+     * *Los espacios de nombres se pueden importar con la palabra clave use
+     * *Los espacios de nombres se pueden utilizar con la palabra clave as para cambiar el nombre de los espacios de nombres importados
+     * *Los espacios de nombres se pueden utilizar con la palabra clave use para importar una clase o interfaz en el ámbito actual
+     * *Los espacios de nombres se pueden utilizar con la palabra clave use para importar una función o constante en el ámbito actual
+     * 
      */
 ?>
