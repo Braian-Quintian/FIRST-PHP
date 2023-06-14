@@ -1081,5 +1081,14 @@
      * *__get()
      * | El método __get() se ejecuta automáticamente cuando se intenta obtener el valor de una propiedad inaccesible.
      * 
+     * 
+     * ! 10.3 (14)  Método estáticos
+     * *Los métodos estáticos se pueden llamar directamente, sin crear una instancia de una clase.
+     * *Los métodos estáticos se declaran con la palabra clave static
+     * *Los métodos estáticos no pueden acceder a las propiedades no estáticas de la clase mediante la palabra clave $this
+     * *Los métodos estáticos se pueden acceder utilizando el operador de resolución de ámbito (::)
+     * | Clase::metodoEstatico();
+     * 
+     * 
      */
 ?>
