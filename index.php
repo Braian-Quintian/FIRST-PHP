@@ -1115,6 +1115,10 @@
      * ++ public function metodo3(): string;
      * ++}
      * 
+     * ! 10.6 (14) Polimorfismo
+     * *El polimorfismo es una característica de la POO que permite que una clase hija herede de una clase padre, pero también puede anular los métodos de la clase padre.
+     * *El polimorfismo se puede implementar mediante herencia.
+     * *El polimorfismo se puede implementar mediante interfaces.
      * 
      * 
      */
