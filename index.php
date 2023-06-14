@@ -1089,6 +1089,16 @@
      * *Los métodos estáticos se pueden acceder utilizando el operador de resolución de ámbito (::)
      * | Clase::metodoEstatico();
      * 
-     * 
+     * ! 10.4 (14) Clases Abstractas
+     * *Las clases abstractas no se pueden instanciar, solo se pueden usar como clases base.
+     * *Los métodos abstractos solo se pueden usar en clases abstractas y deben declararse en las clases hijas.
+     * *Las clases abstractas pueden tener propiedades y métodos no abstractos.
+     * *Los métodos y propiedades abstractos se declaran con la palabra clave abstract
+     * *Cuando se hereda de una clase abstracta, se debe proporcionar una implementación para todos los métodos abstractos en la clase hija.
+     * ++ abstract class ClaseAbstracta {
+     * ++ abstract public function metodoAbstracto1();
+     * ++ abstract public function metodoAbstracto2($parametro1, $parametro2);
+     * ++ abstract public function metodoAbstracto3(): string;
+     * ++}
      */
 ?>
