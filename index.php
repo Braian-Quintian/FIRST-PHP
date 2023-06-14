@@ -1136,5 +1136,9 @@
      * *Los espacios de nombres se pueden utilizar con la palabra clave use para importar una clase o interfaz en el ámbito actual
      * *Los espacios de nombres se pueden utilizar con la palabra clave use para importar una función o constante en el ámbito actual
      * 
+     * ! 10.9 (14) Traits
+     * *Los rasgos se utilizan para declarar métodos que se pueden usar en varias clases.
+     * *Los rasgos pueden tener métodos y métodos abstractos que pueden ser utilizados por múltiples clases, sin embargo, los rasgos no pueden ser instanciados por sí mismos.
+     * *Los rasgos se declaran con la palabra clave trait
      */
 ?>
