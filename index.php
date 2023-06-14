@@ -1100,5 +1100,22 @@
      * ++ abstract public function metodoAbstracto2($parametro1, $parametro2);
      * ++ abstract public function metodoAbstracto3(): string;
      * ++}
+     * 
+     * ! 10.5 (14) Interfaces
+     * * Una interfaz es similar a una clase abstracta. Las interfaces no pueden usarse para crear objetos.
+     * * Las interfaces solo pueden tener métodos abstractos y constantes.
+     * * Los métodos de interfaz deben ser implementados en las clases que implementan la interfaz.
+     * * Las clases pueden implementar más de una interfaz utilizando la palabra clave implements
+     * * Las clases pueden heredar de una clase y al mismo tiempo implementar una o más interfaces utilizando las palabras clave extends e implements
+     * * Las interfaces se pueden heredar de otras interfaces utilizando la palabra clave extends
+     * *Las interfaces se definen utilizando la palabra clave interface
+     * ++ interface NombreInterfaz {
+     * ++ public function metodo1();
+     * ++ public function metodo2($parametro1, $parametro2);
+     * ++ public function metodo3(): string;
+     * ++}
+     * 
+     * 
+     * 
      */
 ?>
