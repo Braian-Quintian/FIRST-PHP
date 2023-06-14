@@ -1120,6 +1120,12 @@
      * *El polimorfismo se puede implementar mediante herencia.
      * *El polimorfismo se puede implementar mediante interfaces.
      * 
+     * ! 10.7 (14) Autoload
+     * *La función spl_autoload_register () registra cualquier número de funciones de autocarga, lo que permite que las clases y las interfaces se carguen automáticamente si aún no se han definido.
+     * *spl_autoload_register() proporciona una forma más flexible para implementar la autocarga de clases y es el método recomendado para cargar automáticamente las clases.
+     * ++ spl_autoload_register(function ($nombreClase) {
+     * ++ $nombreClase
+     * ++ });
      * 
      */
 ?>
