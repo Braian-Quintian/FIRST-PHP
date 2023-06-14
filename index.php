@@ -1052,5 +1052,20 @@
      * *Polimorfismo
      * | Es la capacidad de un objeto de tomar diferentes formas
      * 
+     * ! 10.1 (14) Modificadores de acceso en PHP
+     * °los modificadores de acceso son palabras clave utilizadas en el POO para controlar la visibilidad y acceso a los miembros(atributos y metodos) de una clase.
+     * *public
+     * | Los miembros declarados como public son accesibles desde cualquier lugar
+     * 
+     * *private
+     * | Una propiedad o método declarado como private solo es accesible desde dentro de la clase que lo define. No se puede acceder directamente a él desde fuera de la clase, ni siquiera desde las clases hijas que heredan de ella.
+     * 
+     * *protected
+     * | Una propiedad o método declarado como protected es accesible desde dentro de la clase que lo define y también desde las clases hijas que heredan de ella. A diferencia de private, las clases hijas pueden acceder a las propiedades o métodos protegidos heredados.
+     * 
+     * ++En resumen, la diferencia principal radica en la accesibilidad desde las clases hijas.
+     * ++private restringe completamente el acceso desde las clases hijas
+     * ++mientras que protected permite que las clases hijas accedan a los miembros protegidos heredados.
+     * 
      */
 ?>
