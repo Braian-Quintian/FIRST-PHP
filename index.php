@@ -999,5 +999,35 @@
      * *En este ejemplo, se lee el contenido del archivo "archivo.txt"
      * *y se almacena en la variable $content. Luego, se verifica si la lectura fue exitosa
      * *y se imprime el contenido si todo salió bien.
+     * 
+     * ! 9.3 (13) Json_encode y Json_decode
+     * *json_encode
+     * | json_encode —  se utiliza para convertir una estructura de datos en PHP en una cadena JSON
+     * ++ json_encode(mixed $value, int $flags = 0, int $depth = 512): string|false
+     * / $value: El valor a codificar. Este parámetro sólo puede ser de tipo array o object. Los valores de cualquier otro tipo darán como resultado un valor NULL y un mensaje de advertencia.
+     * / $flags: Las opciones JSON que se pasan a json_encode(), como JSON_HEX_QUOT, JSON_HEX_TAG, JSON_HEX_AMP, JSON_HEX_APOS, JSON_NUMERIC_CHECK, JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES, JSON_FORCE_OBJECT, JSON_PRESERVE_ZERO_FRACTION, JSON_UNESCAPED_UNICODE, JSON_PARTIAL_OUTPUT_ON_ERROR. El valor predeterminado es 0.
+     * / $depth: Establece la profundidad máxima. Debe ser mayor que 0.
+     * -$productos = [
+     * - [
+     * -  'nombre' => 'iPhone 12',
+     * -  'precio' => 1000,
+     * -  'disponible' => true,
+     * - ],
+     * - [
+     * -  'nombre' => 'tablet',
+     * -  'precio' => 500,
+     * -  'disponible' => true
+     * - ]
+     * -]
+     * - $json = json_encode($productos, JSON_UNIESCAPED_UNICODE, JSON_PARTIAL_OUTPUT_ON_ERROR)
+     * - echo $json;
+     * - [{"nombre":"iPhone 12","precio":1000,"disponible":true},{"nombre":"tablet","precio":500,"disponible":true}]
+     * 
+     * *json_decode
+     * | json_decode — Decodifica un string de JSON y lo convierte en una estructura de datos de PHP
+     * ++ json_decode(string $json, bool $assoc = false, int $depth = 512, int $options = 0): mixed
+     *  / $json: La cadena JSON a decodificar
+     * 
+     * 
      */
 ?>
