@@ -1067,5 +1067,19 @@
      * ++private restringe completamente el acceso desde las clases hijas
      * ++mientras que protected permite que las clases hijas accedan a los miembros protegidos heredados.
      * 
+     * ! 10.2 (14) Métodos mágicos en PHP
+     * *Los métodos mágicos son métodos predefinidos que se ejecutan automáticamente en ciertas circunstancias.
+     * *__construct()
+     * | El método __construct() se ejecuta automáticamente cada vez que se crea un objeto de una clase.
+     * 
+     * *__destruct()
+     * | El método __destruct() se ejecuta automáticamente cuando un objeto se destruye o se elimina de la memoria.
+     * 
+     * *__set()
+     * | El método __set() se ejecuta automáticamente cuando se intenta asignar un valor a una propiedad inaccesible.
+     * 
+     * *__get()
+     * | El método __get() se ejecuta automáticamente cuando se intenta obtener el valor de una propiedad inaccesible.
+     * 
      */
 ?>
