@@ -1028,6 +1028,29 @@
      * ++ json_decode(string $json, bool $assoc = false, int $depth = 512, int $options = 0): mixed
      *  / $json: La cadena JSON a decodificar
      * 
+     * ! 10 (14) Programación Orientada a Objetos
+     * *Clases
+     * | Es una plantilla que describe las características y comportamientos de un objeto
+     * 
+     * *Objeto
+     * | Es una instancia de una clase, Representa un individiu o entidad especifica
+     * 
+     * *Atributos
+     * | Son las propiedades o caracteristicas de un objeto, Definen el estado de un objeto y se representan mediante variables en una clase
+     * 
+     * *Método
+     * | Son las acciones o comportamientos que un objeto puede realizaR
+     * 
+     * ++ OJO (los métodos tienen más prioridad que los atributos en una clase, ya que proporcionan la lógica y el comportamiento para manipular y acceder a los atributos.)
+     * 
+     * *Encapsulación
+     * | Es el proceso de ocultar todos los detalles de un objeto que no contribuyen a sus características esenciales
+     * 
+     * *Herecia
+     * | Es la capacidad de una clase de heredar propiedades y métodos de otra clase
+     * 
+     * *Polimorfismo
+     * | Es la capacidad de un objeto de tomar diferentes formas
      * 
      */
 ?>
