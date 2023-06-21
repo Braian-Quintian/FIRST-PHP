@@ -1189,4 +1189,21 @@
     * -Las entradas en las columnas son del mismo tipo de datos
     * -El orden de las filas y las columnas no es importante
     * 
+    * ! 12.1 (15) Entidades y atributos
+    * *Entidad: Son categorias de cosas que son importantes en un negocio y sobre las que se debe conservar información.
+    * ~Estos son algunos ejemplos de entidades:
+    * -PERSON:
+    * ° Agent, Customer, Employee, Manager, Owner, Salesperson, Supplier,Insured
+    * -PLACE:
+    * ° Branch, Building, City, Country, Region, Warehouse,State,Municipality
+    * -THING:
+    * ° Account, Car, Computer, Equipment, Inventory, Policy, Product, Property, Stock, Vehicle
+    * -CONCEPT:
+    * ° Account, Address, Date, Event, Invoice, Order, Payment, Policy, Sale, Transaction,Risk,Coverage,Job
+    * -ORGANIZATION:
+    * ° Company, Corporation, Division, Department, Government, Agency
+    * -EVENT:
+    * ° Election, Claim
+    * *Atributo: Es una propiedad o característica de una entidad.
+    *  
     */
