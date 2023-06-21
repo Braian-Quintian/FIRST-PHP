@@ -1250,4 +1250,17 @@
     * -Opcional (cero registros coincidentes)
     * -Obligatoria (al menos un registro coincidente en cada entidad)
     * 
+    * ! 12.4 (15) Normalización
+    * *La normalización es el proceso de organizar los datos en una base de datos.
+    * *La normalización se utiliza para eliminar las redundancias y las dependencias no deseadas.
+    * ~Primera Forma Normal (1NF)
+    * -Elimine los grupos repetidos de columnas de una tabla.
+    * -Cree una tabla independiente para cada conjunto de datos relacionados
+    * -Identifique cada conjunto de datos relacionados con una clave primaria
+    * ~Segunda Forma Normal (2NF)
+    * -Cree tablas independientes para conjuntos de valores que se apliquen a varios registros
+    * -Relacione estas tablas con una clave externa
+    * ~Tercera Forma Normal (3NF)
+    * -Elimine los campos que no dependan de la clave primaria
+    * 
     */
