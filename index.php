@@ -990,155 +990,160 @@
      * -$content = file_get_contents('archivo.txt');
      *-if ($content !== false) {
      *-    // El archivo se leyó correctamente
-     *-    echo $content;
-     *-} else {
-     *-    // Ocurrió un error al leer el archivo
-     *-    echo 'No se pudo leer el archivo.';
-     *-}
-     *
-     * *En este ejemplo, se lee el contenido del archivo "archivo.txt"
-     * *y se almacena en la variable $content. Luego, se verifica si la lectura fue exitosa
-     * *y se imprime el contenido si todo salió bien.
-     * 
-     * ! 9.3 (13) Json_encode y Json_decode
-     * *json_encode
-     * | json_encode —  se utiliza para convertir una estructura de datos en PHP en una cadena JSON
-     * ++ json_encode(mixed $value, int $flags = 0, int $depth = 512): string|false
-     * / $value: El valor a codificar. Este parámetro sólo puede ser de tipo array o object. Los valores de cualquier otro tipo darán como resultado un valor NULL y un mensaje de advertencia.
-     * / $flags: Las opciones JSON que se pasan a json_encode(), como JSON_HEX_QUOT, JSON_HEX_TAG, JSON_HEX_AMP, JSON_HEX_APOS, JSON_NUMERIC_CHECK, JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES, JSON_FORCE_OBJECT, JSON_PRESERVE_ZERO_FRACTION, JSON_UNESCAPED_UNICODE, JSON_PARTIAL_OUTPUT_ON_ERROR. El valor predeterminado es 0.
-     * / $depth: Establece la profundidad máxima. Debe ser mayor que 0.
-     * -$productos = [
-     * - [
-     * -  'nombre' => 'iPhone 12',
-     * -  'precio' => 1000,
-     * -  'disponible' => true,
-     * - ],
-     * - [
-     * -  'nombre' => 'tablet',
-     * -  'precio' => 500,
-     * -  'disponible' => true
-     * - ]
-     * -]
-     * - $json = json_encode($productos, JSON_UNIESCAPED_UNICODE, JSON_PARTIAL_OUTPUT_ON_ERROR)
-     * - echo $json;
-     * - [{"nombre":"iPhone 12","precio":1000,"disponible":true},{"nombre":"tablet","precio":500,"disponible":true}]
-     * 
-     * *json_decode
-     * | json_decode — Decodifica un string de JSON y lo convierte en una estructura de datos de PHP
-     * ++ json_decode(string $json, bool $assoc = false, int $depth = 512, int $options = 0): mixed
-     *  / $json: La cadena JSON a decodificar
-     * 
-     * ! 10 (14) Programación Orientada a Objetos
-     * *Clases
-     * | Es una plantilla que describe las características y comportamientos de un objeto
-     * 
-     * *Objeto
-     * | Es una instancia de una clase, Representa un individiu o entidad especifica
-     * 
-     * *Atributos
-     * | Son las propiedades o caracteristicas de un objeto, Definen el estado de un objeto y se representan mediante variables en una clase
-     * 
-     * *Método
-     * | Son las acciones o comportamientos que un objeto puede realizaR
-     * 
-     * ++ OJO (los métodos tienen más prioridad que los atributos en una clase, ya que proporcionan la lógica y el comportamiento para manipular y acceder a los atributos.)
-     * 
-     * *Encapsulación
-     * | Es el proceso de ocultar todos los detalles de un objeto que no contribuyen a sus características esenciales
-     * 
-     * *Herecia
-     * | Es la capacidad de una clase de heredar propiedades y métodos de otra clase
-     * 
-     * *Polimorfismo
-     * | Es la capacidad de un objeto de tomar diferentes formas
-     * 
-     * ! 10.1 (14) Modificadores de acceso en PHP
-     * °los modificadores de acceso son palabras clave utilizadas en el POO para controlar la visibilidad y acceso a los miembros(atributos y metodos) de una clase.
-     * *public
-     * | Los miembros declarados como public son accesibles desde cualquier lugar
-     * 
-     * *private
-     * | Una propiedad o método declarado como private solo es accesible desde dentro de la clase que lo define. No se puede acceder directamente a él desde fuera de la clase, ni siquiera desde las clases hijas que heredan de ella.
-     * 
-     * *protected
-     * | Una propiedad o método declarado como protected es accesible desde dentro de la clase que lo define y también desde las clases hijas que heredan de ella. A diferencia de private, las clases hijas pueden acceder a las propiedades o métodos protegidos heredados.
-     * 
-     * ++En resumen, la diferencia principal radica en la accesibilidad desde las clases hijas.
-     * ++private restringe completamente el acceso desde las clases hijas
-     * ++mientras que protected permite que las clases hijas accedan a los miembros protegidos heredados.
-     * 
-     * ! 10.2 (14) Métodos mágicos en PHP
-     * *Los métodos mágicos son métodos predefinidos que se ejecutan automáticamente en ciertas circunstancias.
-     * *__construct()
-     * | El método __construct() se ejecuta automáticamente cada vez que se crea un objeto de una clase.
-     * 
-     * *__destruct()
-     * | El método __destruct() se ejecuta automáticamente cuando un objeto se destruye o se elimina de la memoria.
-     * 
-     * *__set()
-     * | El método __set() se ejecuta automáticamente cuando se intenta asignar un valor a una propiedad inaccesible.
-     * 
-     * *__get()
-     * | El método __get() se ejecuta automáticamente cuando se intenta obtener el valor de una propiedad inaccesible.
-     * 
-     * 
-     * ! 10.3 (14)  Método estáticos
-     * *Los métodos estáticos se pueden llamar directamente, sin crear una instancia de una clase.
-     * *Los métodos estáticos se declaran con la palabra clave static
-     * *Los métodos estáticos no pueden acceder a las propiedades no estáticas de la clase mediante la palabra clave $this
-     * *Los métodos estáticos se pueden acceder utilizando el operador de resolución de ámbito (::)
-     * | Clase::metodoEstatico();
-     * 
-     * ! 10.4 (14) Clases Abstractas
-     * *Las clases abstractas no se pueden instanciar, solo se pueden usar como clases base.
-     * *Los métodos abstractos solo se pueden usar en clases abstractas y deben declararse en las clases hijas.
-     * *Las clases abstractas pueden tener propiedades y métodos no abstractos.
-     * *Los métodos y propiedades abstractos se declaran con la palabra clave abstract
-     * *Cuando se hereda de una clase abstracta, se debe proporcionar una implementación para todos los métodos abstractos en la clase hija.
-     * ++ abstract class ClaseAbstracta {
-     * ++ abstract public function metodoAbstracto1();
-     * ++ abstract public function metodoAbstracto2($parametro1, $parametro2);
-     * ++ abstract public function metodoAbstracto3(): string;
-     * ++}
-     * 
-     * ! 10.5 (14) Interfaces
-     * * Una interfaz es similar a una clase abstracta. Las interfaces no pueden usarse para crear objetos.
-     * * Las interfaces solo pueden tener métodos abstractos y constantes.
-     * * Los métodos de interfaz deben ser implementados en las clases que implementan la interfaz.
-     * * Las clases pueden implementar más de una interfaz utilizando la palabra clave implements
-     * * Las clases pueden heredar de una clase y al mismo tiempo implementar una o más interfaces utilizando las palabras clave extends e implements
-     * * Las interfaces se pueden heredar de otras interfaces utilizando la palabra clave extends
-     * *Las interfaces se definen utilizando la palabra clave interface
-     * ++ interface NombreInterfaz {
-     * ++ public function metodo1();
-     * ++ public function metodo2($parametro1, $parametro2);
-     * ++ public function metodo3(): string;
-     * ++}
-     * 
-     * ! 10.6 (14) Polimorfismo
-     * *El polimorfismo es una característica de la POO que permite que una clase hija herede de una clase padre, pero también puede anular los métodos de la clase padre.
-     * *El polimorfismo se puede implementar mediante herencia.
-     * *El polimorfismo se puede implementar mediante interfaces.
-     * 
-     * ! 10.7 (14) Autoload
-     * *La función spl_autoload_register () registra cualquier número de funciones de autocarga, lo que permite que las clases y las interfaces se carguen automáticamente si aún no se han definido.
-     * *spl_autoload_register() proporciona una forma más flexible para implementar la autocarga de clases y es el método recomendado para cargar automáticamente las clases.
-     * ++ spl_autoload_register(function ($nombreClase) {
-     * ++ $nombreClase
-     * ++ });
-     * 
-     *  ! 10.8 (14) Namespaces
-     * *Los espacios de nombres se utilizan para agrupar clases relacionadas, interfaces, funciones y constantes.
-     * *Los espacios de nombres se pueden definir utilizando la palabra clave namespace
-     * *Los espacios de nombres se pueden anidar indefinidamente
-     * *Los espacios de nombres se pueden importar con la palabra clave use
-     * *Los espacios de nombres se pueden utilizar con la palabra clave as para cambiar el nombre de los espacios de nombres importados
-     * *Los espacios de nombres se pueden utilizar con la palabra clave use para importar una clase o interfaz en el ámbito actual
-     * *Los espacios de nombres se pueden utilizar con la palabra clave use para importar una función o constante en el ámbito actual
-     * 
-     * ! 10.9 (14) Traits
-     * *Los rasgos se utilizan para declarar métodos que se pueden usar en varias clases.
-     * *Los rasgos pueden tener métodos y métodos abstractos que pueden ser utilizados por múltiples clases, sin embargo, los rasgos no pueden ser instanciados por sí mismos.
-     * *Los rasgos se declaran con la palabra clave trait
-     */
-?>
+    *-    echo $content;
+    *-} else {
+    *-    // Ocurrió un error al leer el archivo
+    *-    echo 'No se pudo leer el archivo.';
+    *-}
+    *
+    * *En este ejemplo, se lee el contenido del archivo "archivo.txt"
+    * *y se almacena en la variable $content. Luego, se verifica si la lectura fue exitosa
+    * *y se imprime el contenido si todo salió bien.
+    * 
+    * ! 9.3 (13) Json_encode y Json_decode
+    * *json_encode
+    * | json_encode —  se utiliza para convertir una estructura de datos en PHP en una cadena JSON
+    * ++ json_encode(mixed $value, int $flags = 0, int $depth = 512): string|false
+    * / $value: El valor a codificar. Este parámetro sólo puede ser de tipo array o object. Los valores de cualquier otro tipo darán como resultado un valor NULL y un mensaje de advertencia.
+    * / $flags: Las opciones JSON que se pasan a json_encode(), como JSON_HEX_QUOT, JSON_HEX_TAG, JSON_HEX_AMP, JSON_HEX_APOS, JSON_NUMERIC_CHECK, JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES, JSON_FORCE_OBJECT, JSON_PRESERVE_ZERO_FRACTION, JSON_UNESCAPED_UNICODE, JSON_PARTIAL_OUTPUT_ON_ERROR. El valor predeterminado es 0.
+    * / $depth: Establece la profundidad máxima. Debe ser mayor que 0.
+    * -$productos = [
+    * - [
+    * -  'nombre' => 'iPhone 12',
+    * -  'precio' => 1000,
+    * -  'disponible' => true,
+    * - ],
+    * - [
+    * -  'nombre' => 'tablet',
+    * -  'precio' => 500,
+    * -  'disponible' => true
+    * - ]
+    * -]
+    * - $json = json_encode($productos, JSON_UNIESCAPED_UNICODE, JSON_PARTIAL_OUTPUT_ON_ERROR)
+    * - echo $json;
+    * - [{"nombre":"iPhone 12","precio":1000,"disponible":true},{"nombre":"tablet","precio":500,"disponible":true}]
+    * 
+    * *json_decode
+    * | json_decode — Decodifica un string de JSON y lo convierte en una estructura de datos de PHP
+    * ++ json_decode(string $json, bool $assoc = false, int $depth = 512, int $options = 0): mixed
+    *  / $json: La cadena JSON a decodificar
+    * 
+    * ! 10 (14) Programación Orientada a Objetos
+    * *Clases
+    * | Es una plantilla que describe las características y comportamientos de un objeto
+    * 
+    * *Objeto
+    * | Es una instancia de una clase, Representa un individiu o entidad especifica
+    * 
+    * *Atributos
+    * | Son las propiedades o caracteristicas de un objeto, Definen el estado de un objeto y se representan mediante variables en una clase
+    * 
+    * *Método
+    * | Son las acciones o comportamientos que un objeto puede realizaR
+    * 
+    * ++ OJO (los métodos tienen más prioridad que los atributos en una clase, ya que proporcionan la lógica y el comportamiento para manipular y acceder a los atributos.)
+    * 
+    * *Encapsulación
+    * | Es el proceso de ocultar todos los detalles de un objeto que no contribuyen a sus características esenciales
+    * 
+    * *Herecia
+    * | Es la capacidad de una clase de heredar propiedades y métodos de otra clase
+    * 
+    * *Polimorfismo
+    * | Es la capacidad de un objeto de tomar diferentes formas
+    * 
+    * ! 10.1 (14) Modificadores de acceso en PHP
+    * °los modificadores de acceso son palabras clave utilizadas en el POO para controlar la visibilidad y acceso a los miembros(atributos y metodos) de una clase.
+    * *public
+    * | Los miembros declarados como public son accesibles desde cualquier lugar
+    * 
+    * *private
+    * | Una propiedad o método declarado como private solo es accesible desde dentro de la clase que lo define. No se puede acceder directamente a él desde fuera de la clase, ni siquiera desde las clases hijas que heredan de ella.
+    * 
+    * *protected
+    * | Una propiedad o método declarado como protected es accesible desde dentro de la clase que lo define y también desde las clases hijas que heredan de ella. A diferencia de private, las clases hijas pueden acceder a las propiedades o métodos protegidos heredados.
+    * 
+    * ++En resumen, la diferencia principal radica en la accesibilidad desde las clases hijas.
+    * ++private restringe completamente el acceso desde las clases hijas
+    * ++mientras que protected permite que las clases hijas accedan a los miembros protegidos heredados.
+    * 
+    * ! 10.2 (14) Métodos mágicos en PHP
+    * *Los métodos mágicos son métodos predefinidos que se ejecutan automáticamente en ciertas circunstancias.
+    * *__construct()
+    * | El método __construct() se ejecuta automáticamente cada vez que se crea un objeto de una clase.
+    * 
+    * *__destruct()
+    * | El método __destruct() se ejecuta automáticamente cuando un objeto se destruye o se elimina de la memoria.
+    * 
+    * *__set()
+    * | El método __set() se ejecuta automáticamente cuando se intenta asignar un valor a una propiedad inaccesible.
+    * 
+    * *__get()
+    * | El método __get() se ejecuta automáticamente cuando se intenta obtener el valor de una propiedad inaccesible.
+    * 
+    * 
+    * ! 10.3 (14)  Método estáticos
+    * *Los métodos estáticos se pueden llamar directamente, sin crear una instancia de una clase.
+    * *Los métodos estáticos se declaran con la palabra clave static
+    * *Los métodos estáticos no pueden acceder a las propiedades no estáticas de la clase mediante la palabra clave $this
+    * *Los métodos estáticos se pueden acceder utilizando el operador de resolución de ámbito (::)
+    * | Clase::metodoEstatico();
+    * 
+    * ! 10.4 (14) Clases Abstractas
+    * *Las clases abstractas no se pueden instanciar, solo se pueden usar como clases base.
+    * *Los métodos abstractos solo se pueden usar en clases abstractas y deben declararse en las clases hijas.
+    * *Las clases abstractas pueden tener propiedades y métodos no abstractos.
+    * *Los métodos y propiedades abstractos se declaran con la palabra clave abstract
+    * *Cuando se hereda de una clase abstracta, se debe proporcionar una implementación para todos los métodos abstractos en la clase hija.
+    * ++ abstract class ClaseAbstracta {
+    * ++ abstract public function metodoAbstracto1();
+    * ++ abstract public function metodoAbstracto2($parametro1, $parametro2);
+    * ++ abstract public function metodoAbstracto3(): string;
+    * ++}
+    * 
+    * ! 10.5 (14) Interfaces
+    * * Una interfaz es similar a una clase abstracta. Las interfaces no pueden usarse para crear objetos.
+    * * Las interfaces solo pueden tener métodos abstractos y constantes.
+    * * Los métodos de interfaz deben ser implementados en las clases que implementan la interfaz.
+    * * Las clases pueden implementar más de una interfaz utilizando la palabra clave implements
+    * * Las clases pueden heredar de una clase y al mismo tiempo implementar una o más interfaces utilizando las palabras clave extends e implements
+    * * Las interfaces se pueden heredar de otras interfaces utilizando la palabra clave extends
+    * *Las interfaces se definen utilizando la palabra clave interface
+    * ++ interface NombreInterfaz {
+    * ++ public function metodo1();
+    * ++ public function metodo2($parametro1, $parametro2);
+    * ++ public function metodo3(): string;
+    * ++}
+    * 
+    * ! 10.6 (14) Polimorfismo
+    * *El polimorfismo es una característica de la POO que permite que una clase hija herede de una clase padre, pero también puede anular los métodos de la clase padre.
+    * *El polimorfismo se puede implementar mediante herencia.
+    * *El polimorfismo se puede implementar mediante interfaces.
+    * 
+    * ! 10.7 (14) Autoload
+    * *La función spl_autoload_register () registra cualquier número de funciones de autocarga, lo que permite que las clases y las interfaces se carguen automáticamente si aún no se han definido.
+    * *spl_autoload_register() proporciona una forma más flexible para implementar la autocarga de clases y es el método recomendado para cargar automáticamente las clases.
+    * ++ spl_autoload_register(function ($nombreClase) {
+    * ++ $nombreClase
+    * ++ });
+    * 
+    *  ! 10.8 (14) Namespaces
+    * *Los espacios de nombres se utilizan para agrupar clases relacionadas, interfaces, funciones y constantes.
+    * *Los espacios de nombres se pueden definir utilizando la palabra clave namespace
+    * *Los espacios de nombres se pueden anidar indefinidamente
+    * *Los espacios de nombres se pueden importar con la palabra clave use
+    * *Los espacios de nombres se pueden utilizar con la palabra clave as para cambiar el nombre de los espacios de nombres importados
+    * *Los espacios de nombres se pueden utilizar con la palabra clave use para importar una clase o interfaz en el ámbito actual
+    * *Los espacios de nombres se pueden utilizar con la palabra clave use para importar una función o constante en el ámbito actual
+    * 
+    * ! 10.9 (14) Traits
+    * *Los rasgos se utilizan para declarar métodos que se pueden usar en varias clases.
+    * *Los rasgos pueden tener métodos y métodos abstractos que pueden ser utilizados por múltiples clases, sin embargo, los rasgos no pueden ser instanciados por sí mismos.
+    * *Los rasgos se declaran con la palabra clave trait
+    * 
+    * ! 10.10 (14) Composer
+    * *Composer es una herramienta para administrar dependencias en PHP. Le permite declarar las bibliotecas de las que depende su proyecto y las administra (instalación / actualización).
+    * *Composer no es un administrador de paquetes en el sentido de yum o apt-get. Sí, maneja las dependencias, pero no instala nada globalmente. Cuando ejecuta composer install, simplemente descarga las bibliotecas en el directorio vendor.
+    * *Composer requiere PHP 5.3.2+ para funcionar.
+    * 
+    */
