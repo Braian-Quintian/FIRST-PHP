@@ -1221,4 +1221,11 @@
     * -Referencialidad:
     * °Los identificadores únicos se pueden utilizar para establecer relaciones entre tablas.
     * 
+    *! 12.2 (15) Relaciones
+    * *Una relación es una asociación entre dos o más tablas de datos.
+    * *Las relaciones se establecen mediante el uso de claves primarias y claves foráneas.
+    * ~Ejemplo de relaciones:
+    * - Un DEPARTAMENT puede contener uno o varios EMPLOYEEs.
+    * - Un EMPLOYEE solo puede pertenecer a un DEPARTMENT.
+    * 
     */
