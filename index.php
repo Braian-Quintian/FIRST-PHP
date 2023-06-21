@@ -1228,4 +1228,26 @@
     * - Un DEPARTAMENT puede contener uno o varios EMPLOYEEs.
     * - Un EMPLOYEE solo puede pertenecer a un DEPARTMENT.
     * 
+    * ! 12.3 (15) Clave ajena (Foránea)
+    * *Una clave foránea es una columna o un conjunto de columnas que se utiliza para establecer y enforzar una relación entre dos tablas.
+    * ~Caracteristicas de una clave foranea:
+    * -Relación entre tablas:
+    * °Una clave foránea se utiliza para establecer una relación entre dos tablas.
+    * -Integridad referencial:
+    * °Una clave foránea se utiliza para garantizar la integridad referencial entre dos tablas.
+    * -Restricciones de integridad:
+    * °Una clave foránea puede restringir los valores que se pueden insertar en una columna o columnas.
+    * -Consultas y operaciones:
+    * °Una clave foránea se puede utilizar en consultas y operaciones para recuperar y actualizar datos en varias tablas.
+    * -Mantenimiento de la consistencia:
+    * °Una clave foránea se puede utilizar para mantener la consistencia de los datos en varias tablas.
+    * ++Componentes de una relación de bases de datos:
+    * ~Nombre:
+    * -Etiqueta que identifica la relación.
+    * ~Cardinalidad:
+    * -Número de entidades que participan en la relación.
+    * ~Opcionalidad
+    * -Opcional (cero registros coincidentes)
+    * -Obligatoria (al menos un registro coincidente en cada entidad)
+    * 
     */
