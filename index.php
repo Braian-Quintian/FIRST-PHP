@@ -1153,4 +1153,9 @@
     * ++ require __DIR__ . '/vendor/autoload.php';
     * ° spl_autoload_register('autoload');
     * 
+    * ! PHP AVANZADO
+    * ! 11 (15) Integración de php con bases de datos relacionales (Mysql)
+    * *PHP proporciona una serie de funciones para acceder a bases de datos relacionales como MySQL.
+    * *Hay funciones para conectarse y desconectarse de la base de datos, ejecutar consultas y recuperar datos.
+    * *Para acceder a una base de datos MySQL desde PHP, debe usar una extensión de base de datos específica de MySQL como mysqli o PDO.
     */
