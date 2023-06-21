@@ -1146,4 +1146,11 @@
     * *Composer no es un administrador de paquetes en el sentido de yum o apt-get. Sí, maneja las dependencias, pero no instala nada globalmente. Cuando ejecuta composer install, simplemente descarga las bibliotecas en el directorio vendor.
     * *Composer requiere PHP 5.3.2+ para funcionar.
     * 
+    * ! 10.10.1 (14) Autoload con Composer
+    * *Composer proporciona una forma de cargar automáticamente las clases que se encuentran en el directorio vendor.
+    * *Composer genera un archivo llamado autoload.php que contiene una función que carga automáticamente las clases que se encuentran en el directorio vendor.
+    * *Para cargar automáticamente las clases que se encuentran en el directorio vendor, simplemente incluya el archivo autoload.php:
+    * ++ require __DIR__ . '/vendor/autoload.php';
+    * ° spl_autoload_register('autoload');
+    * 
     */
