@@ -1205,5 +1205,20 @@
     * -EVENT:
     * ° Election, Claim
     * *Atributo: Es una propiedad o característica de una entidad.
-    *  
+    * 
+    * ! 12.1 (15) Identificadores Únicos
+    * *Un identificador único es un valor único que se utiliza para identificar de forma exclusiva cada fila en una tabla de datos; 
+    * *También se le conoce como clave primaria.
+    * ~Caracteristicas de un identificador unico
+    * -Unicidad:
+    * °Cada fila de una tabla de datos debe tener un identificador único.
+    * -No nulidad:
+    * °El valor de un identificador único no puede ser NULL.
+    * -Estabilidad:
+    * °El valor de un identificador único no debe cambiar.
+    * -Indexación:
+    * °Los identificadores únicos deben indexarse para mejorar el rendimiento de las consultas.
+    * -Referencialidad:
+    * °Los identificadores únicos se pueden utilizar para establecer relaciones entre tablas.
+    * 
     */
