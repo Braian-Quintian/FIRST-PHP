@@ -1158,4 +1158,35 @@
     * *PHP proporciona una serie de funciones para acceder a bases de datos relacionales como MySQL.
     * *Hay funciones para conectarse y desconectarse de la base de datos, ejecutar consultas y recuperar datos.
     * *Para acceder a una base de datos MySQL desde PHP, debe usar una extensión de base de datos específica de MySQL como mysqli o PDO.
+    * 
+    * ! 12 (15) Bases de datos relacionales
+    * *Una base de datos relacional es una colección de tablas de datos relacionadas entre sí.
+    * *Las tablas de datos son objetos que contienen todos los datos en una base de datos, o solo una parte de los datos, como los datos de una sola fila o columna.
+    * *Las tablas de datos se dividen en registros y campos.
+    * *Un registro es una fila de datos, y un campo es una columna de datos.
+    * *Las tablas de datos a menudo se denominan relaciones.
+    * *Las relaciones entre las tablas se establecen mediante el uso de claves primarias y claves foráneas.
+    * | Clave primaria: Una clave primaria es una columna o un conjunto de columnas que identifican de forma única una fila en una tabla. Una clave primaria puede ser un solo campo o una combinación de varios campos.
+    * | Clave foránea: Una clave foránea es una columna o un conjunto de columnas que se utiliza para establecer y enforzar una relación entre dos tablas.
+    * ~Sistema de gestion de bases de datos (SGBD)
+    * | Un sistema de gestión de bases de datos (SGBD) es un software que se utiliza para crear y administrar bases de datos relacionales.
+    * ~Lenguaje de consulta estructurado (SQL)
+    * | SQL es un lenguaje de programación utilizado para comunicarse con una base de datos.
+    * ~Sistema de gestion de bases de datos relaciones (RDBMS)
+    * | Un sistema de gestión de bases de datos relacionales (RDBMS) es un software que se utiliza para crear y administrar bases de datos relacionales.
+    * °Ventajas de (RDBMS)
+    * -Menos redundancia de datos
+    * -Prevencion de inconsistencias
+    * -Eficacia
+    * -Integridad de los datos
+    * -Confidencialidad
+    * ++Reglas para tablas de bases de datos relacionales
+    * -Cada tabla debe tener un nombre único
+    * -Cada tabla puede contener varias filas
+    * -Cada tabla tiene un valor para identificar de forma única las filas
+    * -Cada columna debe tener un nombre único
+    * -Las entradas en las columnas son valores únicos
+    * -Las entradas en las columnas son del mismo tipo de datos
+    * -El orden de las filas y las columnas no es importante
+    * 
     */
